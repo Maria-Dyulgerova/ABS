@@ -1,0 +1,68 @@
+{
+  "1": {
+    "_id": "1",
+    "firstName": "Asen",
+    "lastName": "Asenov",
+    "artistName": "SomeArtistNickName",
+    "DOB": "",
+    "EGN": "1234536754",
+    "imageUrl": "https://images.app.goo.gl/iWgNaQ3Fg5kf",
+    "instrument": "guitar and voice",
+    "role": "musician trubadur",
+    "startedAt": "2021-11-01T07:22:00.358Z",
+    "address": {
+      "country": "BG",
+      "city": "Sofia",
+      "street": "456 Elm St",
+      "streetNumber": "7",
+      "more": "10 floor"
+    },
+    "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
+    "creatorId": "2"
+  },
+  "2": {
+    "_id": "2",
+    "firstName": "Ivan",
+    "lastName": "Ivanov",
+    "artistName": "SomeOtherArtistNickName",
+    "DOB": "",
+    "EGN": "1234536754",
+    "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
+    "instrument": "piano and voice",
+    "role": "musician piano player",
+    "startedAt": "2022-11-01T07:22:00.358Z",
+    "address": {
+      "country": "BG",
+      "city": "Sofia",
+      "street": "456 Elm St",
+      "streetNumber": "7",
+      "more": "10 floor"
+    },
+    "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
+    "creatorId": "2"
+  },
+  "3": {
+    "_id": "3",
+    "firstName": "George",
+    "lastName": "Georgiev",
+    "artistName": "SomeThirdArtistNickName",
+    "DOB": "",
+    "EGN": "1234536754",
+    "imageUrl": "https://images.app.goo.gl/tj5m1gvzRnnwrHDZ6",
+    "instrument": "",
+    "role": "illusionist",
+    "startedAt": "2023-11-01T07:22:00.358Z",
+    "address": {
+      "country": "BG",
+      "city": "Sofia",
+      "street": "456 Elm St",
+      "streetNumber": "7",
+      "more": "10 floor"
+    },
+    "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
+    "creatorId": "2"
+  }
+}

@@ -7,34 +7,35 @@ const buildOptions = (data) => {
             'content-type': 'application/json'
         };
     }
-
     const token = localStorage.getItem('accessToken');
 
+    console.log(token);
     if (token) {
         options.headers = {
             ...options.headers,
             'X-Authorization': token
         };
     }
-
     return options;
 };
 
 const request = async (method, url, data) => {
+    
     const response = await fetch(url, {
         ...buildOptions(data),
         method,
     });
 
+    //will return "no content" if we proceed Logout
     if (response.status === 204) {
         return {};
     }
-
     const result = await response.json();
 
+    //we can catch result later on to return messages
     if (!response.ok) {
-        throw result;
-    } 
+        throw result.message;
+    }
 
     return result;
 };
