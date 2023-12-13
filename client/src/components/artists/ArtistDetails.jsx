@@ -70,7 +70,7 @@ export default function ArtistDetails() {
                     <p className="type">{artistDetails.artistName}</p>
                 </div>
 
-                <p className="text">{artistDetails.artistName}</p>
+                <p className="text">{artistDetails.role}</p>
 
                 {/* <div className="details-comments">
                     <h2>Comments:</h2>

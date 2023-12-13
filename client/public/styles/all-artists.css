@@ -5,7 +5,7 @@
     border-radius: 10px;
     padding: 20px;
     height: auto;
-    width: 900px;
+    width: 90%;
 }
 
 #catalog-page>h1 {
@@ -27,12 +27,12 @@
     margin: 15px;
     overflow: hidden;
     width: 600px auto;
-    min-height: 210px;
+    /* min-height: 210px; */
     height: auto;
 }
 
 .allArtists-info {
-    padding: 30px;
+    padding: 10px;
     position: relative;
     width: 100%;
 }
@@ -66,11 +66,16 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-size: 20px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 30px;
     text-align: left;
     letter-spacing: 1px;
     padding: 10px;
     margin-top: auto;
     margin-left: 20px;
+}
+.artist-list-item {
+    /* padding: 30px;
+    position: relative; */
+    width: 90%;
 }

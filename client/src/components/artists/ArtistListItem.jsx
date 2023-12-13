@@ -5,16 +5,28 @@ export default function ArtistListItem({
     firstName,
     lastName,
     artistName,
+    instrument,
+    email,
+    phone,
+    role,
+
     // imageUrl,
 }) {
     return (
         <div className="allArtists">
             <div className="allArtists-info">
-                <div>{_id}</div>
-                <div>{artistName}</div>
-                <div>{firstName}</div>
-                <div>{lastName}</div>
-                <Link to={`/artists/${_id}`} className="details-button">Details</Link>
+                <table className="artist-list-item">
+                    <tr>
+                        <td>{_id}</td>
+                        <td>{firstName}&nbsp;{lastName}</td>
+                        <td><h3>{artistName}</h3></td>
+                        <td>{role}</td>
+                        <td>{instrument}</td>
+                        <td>{email}</td>
+                        <td>{phone}</td>
+                        <td><Link to={`/artists/${_id}`} className="details-button">Details</Link></td>
+                    </tr>
+                </table>
             </div>
         </div>
     );

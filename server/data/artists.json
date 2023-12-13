@@ -3,19 +3,47 @@
     "_id": "1",
     "firstName": "Asen",
     "lastName": "Asenov",
-    "artistName": "SomeArtistNickName",
-    "DOB": "",
+    "artistName": "SomeOtherArtistNickName",
+    "DOB": "1982-11-01",
+    "birthPlace": "Burgas",
+    "gender": "m",
+
     "EGN": "1234536754",
-    "imageUrl": "https://images.app.goo.gl/iWgNaQ3Fg5kf",
-    "instrument": "guitar and voice",
-    "role": "musician trubadur",
-    "startedAt": "2021-11-01T07:22:00.358Z",
-    "address": {
-      "country": "BG",
-      "city": "Sofia",
-      "street": "456 Elm St",
-      "streetNumber": "7",
-      "more": "10 floor"
+    "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
+    "instrument": "piano and voice",
+    "role": "musician piano player",
+    "startedAt": "2022-11-01",
+    "contact": {
+      "email": "username@some.com",
+      "phone": "003594235523",
+      "address": {
+        "country": "BG",
+        "city": "Sofia",
+        "postCode": "1000",
+        "street": "456 Elm St",
+        "streetNumber": "7",
+        "more": "10 floor"
+      }
+    },
+    "passport": {
+      "number": "1122334455634",
+      "authority": "MVR Sofia",
+      "issueDate": "2021-11-01",
+      "validityDate": "2024-11-01"
+    },
+    "documents": {
+      "PDnum": "087756",
+      "selfEmplTaxNum": "",
+      "medAttestToDate": "2024-11-01",
+      "accidentInsuranceNum": "9798768757457"
+
+    },
+    "nextOfKin": {
+      "name": "Iveta Georgieva",
+      "address": "Some address here...",
+      "phone": "0088767733552",
+      "email": "username@someserver.com"
+
     },
     "createdAt": "2023-11-01T07:22:00.358Z",
     "updatedAt": "2023-11-01T07:22:00.358Z",
@@ -26,18 +54,46 @@
     "firstName": "Ivan",
     "lastName": "Ivanov",
     "artistName": "SomeOtherArtistNickName",
-    "DOB": "",
+    "DOB": "1982-11-01",
+    "birthPlace": "Burgas",
+    "gender": "m",
+
     "EGN": "1234536754",
     "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
     "instrument": "piano and voice",
     "role": "musician piano player",
-    "startedAt": "2022-11-01T07:22:00.358Z",
-    "address": {
-      "country": "BG",
-      "city": "Sofia",
-      "street": "456 Elm St",
-      "streetNumber": "7",
-      "more": "10 floor"
+    "startedAt": "2022-11-01",
+    "contact": {
+      "email": "username@some.com",
+      "phone": "003594235523",
+      "address": {
+        "country": "BG",
+        "city": "Sofia",
+        "postCode": "1000",
+        "street": "456 Elm St",
+        "streetNumber": "7",
+        "more": "10 floor"
+      }
+    },
+    "passport": {
+      "number": "1122334455634",
+      "authority": "MVR Sofia",
+      "issueDate": "2021-11-01",
+      "validityDate": "2024-11-01"
+    },
+    "documents": {
+      "PDnum": "087756",
+      "selfEmplTaxNum": "",
+      "medAttestToDate": "2024-11-01",
+      "accidentInsuranceNum": "9798768757457"
+
+    },
+    "nextOfKin": {
+      "name": "Iveta Georgieva",
+      "address": "Some address here...",
+      "phone": "0088767733552",
+      "email": "username@someserver.com"
+
     },
     "createdAt": "2023-11-01T07:22:00.358Z",
     "updatedAt": "2023-11-01T07:22:00.358Z",
@@ -47,19 +103,47 @@
     "_id": "3",
     "firstName": "George",
     "lastName": "Georgiev",
-    "artistName": "SomeThirdArtistNickName",
-    "DOB": "",
+    "artistName": "SomeOtherArtistNickName",
+    "DOB": "1982-11-01",
+    "birthPlace": "Burgas",
+    "gender": "m",
+
     "EGN": "1234536754",
-    "imageUrl": "https://images.app.goo.gl/tj5m1gvzRnnwrHDZ6",
-    "instrument": "",
-    "role": "illusionist",
-    "startedAt": "2023-11-01T07:22:00.358Z",
-    "address": {
-      "country": "BG",
-      "city": "Sofia",
-      "street": "456 Elm St",
-      "streetNumber": "7",
-      "more": "10 floor"
+    "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
+    "instrument": "piano and voice",
+    "role": "musician piano player",
+    "startedAt": "2022-11-01",
+    "contact": {
+      "email": "username@some.com",
+      "phone": "003594235523",
+      "address": {
+        "country": "BG",
+        "city": "Sofia",
+        "postCode": "1000",
+        "street": "456 Elm St",
+        "streetNumber": "7",
+        "more": "10 floor"
+      }
+    },
+    "passport": {
+      "number": "1122334455634",
+      "authority": "MVR Sofia",
+      "issueDate": "2021-11-01",
+      "validityDate": "2024-11-01"
+    },
+    "documents": {
+      "PDnum": "087756",
+      "selfEmplTaxNum": "",
+      "medAttestToDate": "2024-11-01",
+      "accidentInsuranceNum": "9798768757457"
+
+    },
+    "nextOfKin": {
+      "name": "Iveta Georgieva",
+      "address": "Some address here...",
+      "phone": "0088767733552",
+      "email": "username@someserver.com"
+
     },
     "createdAt": "2023-11-01T07:22:00.358Z",
     "updatedAt": "2023-11-01T07:22:00.358Z",
