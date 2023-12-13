@@ -1,7 +1,7 @@
 #artist-details {
     position: relative;
     display: block;
-    width: 980px;
+    /* width: 980px; */
     margin: 90px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -59,7 +59,7 @@
 
 .type {
     display: inline-block;
-    color: #959595;
+    color: #585858;
     font-size: 19px;
     margin-left: 10px;
 }
@@ -70,7 +70,7 @@
     margin-left: 15px;
     margin-right: 22px;
     height: 220px;
-    border-radius: 50%;
+    border-radius: 40%;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 

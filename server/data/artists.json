@@ -1,15 +1,14 @@
 {
   "1": {
     "_id": "1",
-    "firstName": "Asen",
-    "lastName": "Asenov",
-    "artistName": "SomeOtherArtistNickName",
+    "name": "Asen Asenov",
+    "nickName": "SomeOtherArtistNickName",
     "DOB": "1982-11-01",
     "birthPlace": "Burgas",
     "gender": "m",
 
     "EGN": "1234536754",
-    "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
+    "imageUrl": "https://w7.pngwing.com/pngs/996/23/png-transparent-brown-hair-man-playing-guiitar-drawing-artist-illustration-rock-life-comics-game-microphone-thumbnail.png",
     "instrument": "piano and voice",
     "role": "musician piano player",
     "startedAt": "2022-11-01",
@@ -32,7 +31,7 @@
       "validityDate": "2024-11-01"
     },
     "documents": {
-      "PDnum": "087756",
+      "PDNum": "087756",
       "selfEmplTaxNum": "",
       "medAttestToDate": "2024-11-01",
       "accidentInsuranceNum": "9798768757457"
@@ -51,15 +50,14 @@
   },
   "2": {
     "_id": "2",
-    "firstName": "Ivan",
-    "lastName": "Ivanov",
-    "artistName": "SomeOtherArtistNickName",
+    "name": "Ivan Ivanov",
+    "nickName": "SomeOtherArtistNickName",
     "DOB": "1982-11-01",
     "birthPlace": "Burgas",
     "gender": "m",
 
     "EGN": "1234536754",
-    "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
+    "imageUrl": "https://w7.pngwing.com/pngs/521/206/png-transparent-concert-music-art-concert-poster-microphone-monochrome-social-group-thumbnail.png",
     "instrument": "piano and voice",
     "role": "musician piano player",
     "startedAt": "2022-11-01",
@@ -82,7 +80,7 @@
       "validityDate": "2024-11-01"
     },
     "documents": {
-      "PDnum": "087756",
+      "PDNum": "087756",
       "selfEmplTaxNum": "",
       "medAttestToDate": "2024-11-01",
       "accidentInsuranceNum": "9798768757457"
@@ -101,15 +99,14 @@
   },
   "3": {
     "_id": "3",
-    "firstName": "George",
-    "lastName": "Georgiev",
-    "artistName": "SomeOtherArtistNickName",
+    "name": "George Georgiev",
+    "nickName": "SomeOtherArtistNickName",
     "DOB": "1982-11-01",
     "birthPlace": "Burgas",
     "gender": "m",
 
     "EGN": "1234536754",
-    "imageUrl": "https://images.app.goo.gl/YxzQNuiaboLVsZ1Q7",
+    "imageUrl": "https://w7.pngwing.com/pngs/940/645/png-transparent-musician-guitarist-musical-ensemble-guitar-microphone-musician-guitarist-thumbnail.png",
     "instrument": "piano and voice",
     "role": "musician piano player",
     "startedAt": "2022-11-01",
@@ -132,7 +129,7 @@
       "validityDate": "2024-11-01"
     },
     "documents": {
-      "PDnum": "087756",
+      "PDNum": "087756",
       "selfEmplTaxNum": "",
       "medAttestToDate": "2024-11-01",
       "accidentInsuranceNum": "9798768757457"
