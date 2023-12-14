@@ -5,8 +5,10 @@ const Path = {
     Login: '/login',
     ArtistsList: '/artists/list',
     ArtistDetails: '/artists/:artistId',
-    Register: '/register',
-    
+    // Register: '/register',
+    ArtistCreate: 'artists/create',
+    ArtistEdit: '/artists/:artistId/edit',
+    ArtistDelete: '/artists/:artistId/delete',
     
 };
 

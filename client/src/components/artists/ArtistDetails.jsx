@@ -1,12 +1,12 @@
-import { useContext, useEffect, useReducer, useState, useMemo } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as artistService from '../../services/artistService';
 // import * as commentService from '../../services/commentService';
 import AuthContext from "../../contexts/authContext";
 // import useForm from '../../hooks/useForm';
-// import { pathToUrl } from "../../utils/pathUtils";
-// import Path from "../../paths";
+import { pathToUrl } from "../../utils/pathUtils";
+import Path from "../../paths";
 
 export default function ArtistDetails() {
     const navigate = useNavigate();
@@ -27,12 +27,12 @@ export default function ArtistDetails() {
 
     
     const deleteButtonClickHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${artistDetails.firstName}`);
+        const hasConfirmed = confirm(`Are you sure you want to delete ${artistDetails.nickName}`);
 
         if (hasConfirmed) {
             await artistService.remove(artistId);
 
-            navigate('/artists');
+            navigate(Path.ArtistsList);
         }
     }
 
@@ -42,72 +42,70 @@ export default function ArtistDetails() {
             <h1>Artist Details</h1>
             <div className="info-section">
                 <div className="artist-header">
-                    <img className="artist-img" src={artistDetails.imageUrl} alt={artistDetails.name} />
                     <div>
+                        <img className="artist-img" src={artistDetails.imageUrl} alt={artistDetails.name} />
+                    
                         <h1>{artistDetails.name}</h1>
                         <p className="type">
                             
                             <strong>{artistDetails.nickName}</strong>
                         </p>
+                        <br/>
+                        
+                    
+                        <p className="type">Role: <strong>{artistDetails.role}</strong></p>
+                        <p className="type">Instrument: <strong>{artistDetails.instrument}</strong></p>
+                        <br/>
+                        <p className="type">Date Of Birth: <strong>{artistDetails.DOB}</strong></p>
+                        <p className="type">Place of Birth: <strong>{artistDetails.POB}</strong></p>
+                        <p className="type">Gender: <strong>{artistDetails.gender}</strong></p>
                         <p className="type">
                             Started at: <strong>{artistDetails.startedAt}</strong>
                         </p>
                     </div>
-                    <div>
-                        <p className="type">Role: <strong>{artistDetails.role}</strong></p>
-                        <p className="type">Instrument: <strong>{artistDetails.instrument}</strong></p>
-                    </div>
-                    <div>
-                    <p className="type">Date Of Birth: <strong>{artistDetails.DOB}</strong></p>
-                    <p className="type">Place of Birth: <strong>{artistDetails.birthPlace}</strong></p>
-                    <p className="type">Gender: <strong>{artistDetails.gender}</strong></p>
-                    </div>
-                    {/* <p className="type">{artistDetails.gender}</p>
-                    <p className="type">{artistDetails.gender}</p> */}
+                </div>
+               
+                <div>
+                    <p className="type">Contact: </p><br/>
+                    <p className="type">Email: <strong>{artistDetails.contact?.email}</strong></p>
+                    <p className="type">Phone: <strong>{artistDetails.contact?.phone}</strong></p>
+                </div>
+               
+                <div className="element-wrapper"> 
+                    <p className="type">Address: </p><br/>
+                    <p className="type">Country: <strong>{artistDetails.contact?.address?.country}</strong></p>
+                    <p className="type">City: <strong>{artistDetails.contact?.address?.postCode}&nbsp;{artistDetails.contact?.address?.city}</strong></p>
+                    <p className="type">Details: <strong>{artistDetails.contact?.address?.details}</strong></p>
                     
                 </div>
-                    <div>
-                        <p className="type">Email: <strong>{artistDetails.contact?.email}</strong></p>
-                        <p className="type">Phone: <strong>{artistDetails.contact?.phone}</strong></p>
-                    </div>
-                    <div> 
-                        <p className="type">Address: </p><br/>
-                        <p className="type">Country: <strong>{artistDetails.contact?.address?.country}</strong></p>
-                        <p className="type">City: <strong>{artistDetails.contact?.address?.postCode}&nbsp;{artistDetails.contact?.address?.city}</strong></p>
-                        <p className="type">Street: <strong>{artistDetails.contact?.address?.street}</strong></p>
-                        <p className="type">Street No: <strong>{artistDetails.contact?.address?.streetNumber}&nbsp;
-                            {artistDetails.contact?.address?.more}</strong>
-                        </p>
-                    </div>
-                    <div>
-                        <p className="type">Passport: </p><br/>
-                        <p className="type">No: <strong>{artistDetails.passport?.number}</strong></p>
-                        <p className="type">Authority: <strong>{artistDetails.passport?.authority}</strong></p>
-                        <p className="type">Issue Date: <strong>{artistDetails.passport?.issueDate}</strong></p>
-                        <p className="type">Validity Date: <strong>{artistDetails.passport?.validityDate}</strong></p>
-                    </div>
-                    <div>
-                        <p className="type">Doduments: </p><br/>
-                        <p className="type">PD No: <strong>{artistDetails.documents?.PDNum}</strong></p>
-                        <p className="type">Self Empl Tax No: <strong>{artistDetails.documents?.selfEmplTaxNum}</strong></p>
-                        <p className="type">Med. Attest To Date: <strong>{artistDetails.documents?.medAttestToDate}</strong></p>
-                        <p className="type">Accident Insurance No: <strong>{artistDetails.documents?.accidentInsuranceNum}</strong></p>
-                    </div>
-                    <div>
-                        <p className="type">Next Of Kin: </p><br/>
-                        <p className="type">Name: <strong>{artistDetails.nextOfKin?.name}</strong></p>
-                        <p className="type">Address: <strong>{artistDetails.nextOfKin?.address}</strong></p>
-                        <p className="type">Email: <strong>{artistDetails.nextOfKin?.email}</strong></p>
-                        <p className="type">Phone: <strong>{artistDetails.nextOfKin?.phone}</strong></p>
-                    </div>
-                    
-                    
-                {/* <p className="text">{artistDetails.role}</p> */}
-
                 
-            </div>
+                <div className="element-wrapper">
+                    <p className="type">Passport: </p><br/>
+                    <p className="type">No: <strong>{artistDetails.passport?.number}</strong></p>
+                    <p className="type">Authority: <strong>{artistDetails.passport?.authority}</strong></p>
+                    <p className="type">Issue Date: <strong>{artistDetails.passport?.issueDate}</strong></p>
+                    <p className="type">Validity Date: <strong>{artistDetails.passport?.validityDate}</strong></p>
+                </div>
+                <div className="element-wrapper">
+                    <p className="type">Doduments: </p><br/>
+                    <p className="type">PD No: <strong>{artistDetails.documents?.PDNum}</strong></p>
+                    <p className="type">Self Empl Tax No: <strong>{artistDetails.documents?.selfEmplTaxNum}</strong></p>
+                    <p className="type">Med. Attest To Date: <strong>{artistDetails.documents?.medAttestToDate}</strong></p>
+                    <p className="type">Accident Insurance No: <strong>{artistDetails.documents?.accidentInsuranceNum}</strong></p>
+                </div>
+                <div className="element-wrapper">
+                    <p className="type">Next Of Kin: </p><br/>
+                    <p className="type">Name: <strong>{artistDetails.nextOfKin?.name}</strong></p>
+                    <p className="type">Address: <strong>{artistDetails.nextOfKin?.address}</strong></p>
+                    <p className="type">Email: <strong>{artistDetails.nextOfKin?.email}</strong></p>
+                    <p className="type">Phone: <strong>{artistDetails.nextOfKin?.phone}</strong></p>
+                </div>
 
-            
+                <Link to={pathToUrl(Path.ArtistEdit, { artistId })} className="button">Edit</Link>
+                        
+                <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
+                {/* <Link to={`/artists/${_id}`} className="edit-button">Edit</Link> */}
+            </div>
         </section>
     );
 }

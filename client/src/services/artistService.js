@@ -18,50 +18,55 @@ export const getOne = async (artist_id) => {
 }
 
 export const create = async (artistData) => {
-    const result = await request.post(baseUrl, artistData);
+    // console.log(artistData);
+    const body = {
+        name: artistData.artistName,
+        nickName: artistData.nickName,
+        DOB: artistData.DOB,
+        POB: artistData.birthPlace,
+        gender: artistData.gender,
+        imageUrl: artistData.imageUrl,
+        role: artistData.role,
+        instrument: artistData.instrument,
+        contact: {
+            email: artistData.email,
+            phone: artistData.phone,
+            address: {
+                country: artistData.country,
+                city: artistData.city,
+                postCode: artistData.postCode,
+                details: artistData.details,
+            }
+        },
+
+        passport: {
+            number: artistData.number,
+            authority: artistData.authority,
+            issueDate: artistData.issueDate,
+            validityDate: artistData.validityDate,
+        },
+        documents: {
+            PDNum: artistData.PDNum,
+            selfEmplTaxNum: artistData.selfEmplTaxNum,
+            medAttestToDate: artistData.medAttestToDate,
+            accidentInsuranceNum: artistData.accidentInsuranceNum,
+
+        },
+        nextOfKin: {
+            name: artistData.nextToKinName,
+            address: artistData.nextToKinAddress,
+            email: artistData.nextToKinEmail,
+            phone: artistData.nextToKinPhone
+        },
+
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        
+    };
+    const result = await request.post(baseUrl, body);
 
     return result;
 };
-
-
-
-
-// import * as request from "../lib/request";
-
-// const baseUrl = 'http://localhost:3030/data/artists'
-
-
-// export const getAll = async () => {
-//     const result = await request.get(baseUrl);
-// console.log(result);
-//     return result;
-// };
-
-// export const getOne = async (artistId) => {
-//     const result = await request.get(`${baseUrl}/${artistId}`, );
-
-//     return result;
-// }
-
-// export const getLatest = async () => {
-//     // const query = new URLSearchParams({
-//     //     sortBy: `_createdOn desc`,
-//     //     offset: 0,
-//     //     pageSize: 3,
-//     // });
-
-//     const query = encodeURIComponent(`offset=0&pageSize=3`);
-//     console.log(query);
-//     const result = await request.get(`${baseUrl}?sortBy=_createdOn%20desc&${query}`);
-
-//     return result;
-// }
-
-// export const create = async (artistData) => {
-//     const result = await request.post(baseUrl, artistData);
-
-//     return result;
-// };
 
 export const edit = async (artistId, artistData) => {
     const result = await request.put(`${baseUrl}/${artistId}`, artistData);

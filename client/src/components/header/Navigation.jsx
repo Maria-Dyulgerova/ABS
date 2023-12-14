@@ -17,6 +17,7 @@ export default function Navigation() {
                 {isAuthenticated && (
                     <div id="user">
                       <Link as={Link} to={Path.ArtistsList}>Artist List</Link>
+                      <Link as={Link} to={Path.ArtistCreate}>Register New Artist</Link>
 //                 
                         {/* <Link to="/games/create">Create Game</Link> */}
                         <Link to={Path.Logout}>Logout</Link>

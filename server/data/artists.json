@@ -4,10 +4,8 @@
     "name": "Asen Asenov",
     "nickName": "SomeOtherArtistNickName",
     "DOB": "1982-11-01",
-    "birthPlace": "Burgas",
+    "POB": "Burgas",
     "gender": "m",
-
-    "EGN": "1234536754",
     "imageUrl": "https://w7.pngwing.com/pngs/996/23/png-transparent-brown-hair-man-playing-guiitar-drawing-artist-illustration-rock-life-comics-game-microphone-thumbnail.png",
     "instrument": "piano and voice",
     "role": "musician piano player",
@@ -19,9 +17,7 @@
         "country": "BG",
         "city": "Sofia",
         "postCode": "1000",
-        "street": "456 Elm St",
-        "streetNumber": "7",
-        "more": "10 floor"
+        "details": "456 Elm St"
       }
     },
     "passport": {
@@ -53,10 +49,8 @@
     "name": "Ivan Ivanov",
     "nickName": "SomeOtherArtistNickName",
     "DOB": "1982-11-01",
-    "birthPlace": "Burgas",
+    "POB": "Burgas",
     "gender": "m",
-
-    "EGN": "1234536754",
     "imageUrl": "https://w7.pngwing.com/pngs/521/206/png-transparent-concert-music-art-concert-poster-microphone-monochrome-social-group-thumbnail.png",
     "instrument": "piano and voice",
     "role": "musician piano player",
@@ -68,9 +62,7 @@
         "country": "BG",
         "city": "Sofia",
         "postCode": "1000",
-        "street": "456 Elm St",
-        "streetNumber": "7",
-        "more": "10 floor"
+        "details": "456 Elm St"
       }
     },
     "passport": {
@@ -102,10 +94,8 @@
     "name": "George Georgiev",
     "nickName": "SomeOtherArtistNickName",
     "DOB": "1982-11-01",
-    "birthPlace": "Burgas",
+    "POB": "Burgas",
     "gender": "m",
-
-    "EGN": "1234536754",
     "imageUrl": "https://w7.pngwing.com/pngs/940/645/png-transparent-musician-guitarist-musical-ensemble-guitar-microphone-musician-guitarist-thumbnail.png",
     "instrument": "piano and voice",
     "role": "musician piano player",
@@ -117,9 +107,7 @@
         "country": "BG",
         "city": "Sofia",
         "postCode": "1000",
-        "street": "456 Elm St",
-        "streetNumber": "7",
-        "more": "10 floor"
+        "details": "456 Elm St"
       }
     },
     "passport": {
@@ -145,5 +133,41 @@
     "createdAt": "2023-11-01T07:22:00.358Z",
     "updatedAt": "2023-11-01T07:22:00.358Z",
     "creatorId": "2"
+  },
+  "09a5355a-f076-4390-9ea2-53102aa645bc": {
+    "_id": "09a5355a-f076-4390-9ea2-53102aa645bc",
+    "name": "Veny Venev",
+    "nickName": "Venyn",    
+    "DOB": "1979-11-01",
+    "POB": "Oslo",
+    "gender": "m",
+    "imageUrl": "https://w7.pngwing.com/pngs/718/814/png-transparent-saxophone-musician-person-bay-photography-brass-instrument-musician-thumbnail.png",
+    "instrument": "sax and voice",
+    "role": "saxophone player",
+    "contact": {
+      "email": "username@mail.com", 
+      "phone": "003594235523", 
+      "address": {
+        "country": "BG",
+        "city": "Sofia",
+        "postCode": "1000",
+        "details": "456 Elm St"
+      }
+    },
+    "documents": {
+      "PDNum": "", "selfEmplTaxNum": "", "medAttestToDate": "", "accidentInsuranceNum": ""
+    },
+
+
+
+"passport": {
+  "number": "5876978907", 
+  "authority": "MVR BG", 
+  "issueDate": "2022-01-01", 
+  "validityDate": "2025-01-01"
+},
+"createdAt": "2023-12-13T21:14:40.732Z",
+"updatedAt": "2023-12-13T21:14:40.732Z"
+
   }
 }
