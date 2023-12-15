@@ -20,7 +20,8 @@ export const getOne = async (artist_id) => {
 export const create = async (artistData) => {
     // console.log(artistData);
     const body = {
-        name: artistData.artistName,
+        _id: artistData._id,
+        artistName: artistData.artistName,
         nickName: artistData.nickName,
         DOB: artistData.DOB,
         POB: artistData.birthPlace,
@@ -53,10 +54,10 @@ export const create = async (artistData) => {
 
         },
         nextOfKin: {
-            name: artistData.nextToKinName,
-            address: artistData.nextToKinAddress,
-            email: artistData.nextToKinEmail,
-            phone: artistData.nextToKinPhone
+            nextToKinName: artistData.nextToKinName,
+            nextToKinAddress: artistData.nextToKinAddress,
+            nextToKinEmail: artistData.nextToKinEmail,
+            nextToKinPhone: artistData.nextToKinPhone
         },
 
         createdAt: new Date().toISOString(),

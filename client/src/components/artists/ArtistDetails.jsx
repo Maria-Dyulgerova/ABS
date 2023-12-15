@@ -27,7 +27,7 @@ export default function ArtistDetails() {
 
     
     const deleteButtonClickHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${artistDetails.nickName}`);
+        const hasConfirmed = confirm(`Are you sure you want to delete ${artistDetails._id}`);
 
         if (hasConfirmed) {
             await artistService.remove(artistId);
@@ -45,7 +45,7 @@ export default function ArtistDetails() {
                     <div>
                         <img className="artist-img" src={artistDetails.imageUrl} alt={artistDetails.name} />
                     
-                        <h1>{artistDetails.name}</h1>
+                        <h1>{artistDetails.artistName}</h1>
                         <p className="type">
                             
                             <strong>{artistDetails.nickName}</strong>
@@ -95,10 +95,10 @@ export default function ArtistDetails() {
                 </div>
                 <div className="element-wrapper">
                     <p className="type">Next Of Kin: </p><br/>
-                    <p className="type">Name: <strong>{artistDetails.nextOfKin?.name}</strong></p>
-                    <p className="type">Address: <strong>{artistDetails.nextOfKin?.address}</strong></p>
-                    <p className="type">Email: <strong>{artistDetails.nextOfKin?.email}</strong></p>
-                    <p className="type">Phone: <strong>{artistDetails.nextOfKin?.phone}</strong></p>
+                    <p className="type">Name: <strong>{artistDetails.nextOfKin?.nextToKinName}</strong></p>
+                    <p className="type">Address: <strong>{artistDetails.nextOfKin?.nextToKinAddress}</strong></p>
+                    <p className="type">Email: <strong>{artistDetails.nextOfKin?.nextToKinEmail}</strong></p>
+                    <p className="type">Phone: <strong>{artistDetails.nextOfKin?.nextToKinPhone}</strong></p>
                 </div>
 
                 <Link to={pathToUrl(Path.ArtistEdit, { artistId })} className="button">Edit</Link>

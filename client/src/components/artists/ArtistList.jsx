@@ -22,17 +22,30 @@ export default function ArtistList() {
         
         <section id="catalog-page">
             <h1>All Artists</h1>
-
+            <div className="allArtists">
+                <div className="allArtists-info">
+                    <table className="artist-list-item">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Instrument</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
             {artists.map(artist => (
                 
                 <ArtistListItem 
-                    key={artist._id} 
-                    _id={artist._id}
-                    name={artist.name} 
-                    nickName={artist.nickName}
-                    role={artist.role}
-                    instrument={artist.instrument}
-                    contact={artist.contact}
+                    key={artist._id}  
+                    _id={artist._id} 
+                    artistName={artist.artistName}  
+                    nickName={artist.nickName} 
+                    role={artist.role} 
+                    instrument={artist.instrument} 
+                    contact={artist.contact} 
                     />
                 
             ))}
@@ -42,6 +55,10 @@ export default function ArtistList() {
             {artists.length === 0 && (
                 <h3 className="no-articles">No artists yet</h3>
             )}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     );
 }

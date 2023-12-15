@@ -36,8 +36,8 @@ export default function ArtistCreate() {
                         <label htmlFor="DOB">Date of birth:</label>
                         <input type="text" id="DOB" name="DOB" placeholder="" />
 
-                        <label htmlFor="birthPlace">Place of birth:</label>
-                        <input type="text" id="birthPlace" name="birthPlace" placeholder="" />
+                        <label htmlFor="POB">Place of birth:</label>
+                        <input type="text" id="POB" name="POB" placeholder="" />
 
                         <label htmlFor="gender">Gender:</label>
                         <input type="text" id="gender" name="gender" placeholder="" />

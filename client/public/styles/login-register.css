@@ -2,10 +2,10 @@
     position: relative;
     width: 650px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
+    background: rgba(37, 42, 55, 0.7) ;
     box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
 }
 
@@ -27,7 +27,7 @@
 .brand-logo {
     height: 100px;
     width: 100px;
-    background: url("../images/icon-gamepad-2.png");
+    background: url("../images/hero_120px.png");
     margin: auto;
     border-radius: 50%;
     box-sizing: border-box;
@@ -41,7 +41,7 @@
     text-align: center;
     color: white;
     letter-spacing: 1px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     margin-bottom: 17px;
 }
 
@@ -60,7 +60,7 @@ label {
     font-size: 27px;
     color: white;
     margin-top: 13px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
 label:nth-of-type(2) {
@@ -81,12 +81,12 @@ input[type="password"],
 input[type="number"],
 input[type="email"] {
     background: #ecf0f3;
-    padding: 30px;
+    /* padding: 30px; */
     padding-left: 20px;
-    height: 50px;
+    height: 40px;
     margin-top: 10px;
     font-size: 24px;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
 }
 
@@ -95,10 +95,10 @@ label[for="terms"]>input {
 }
 
 .btn.submit {
-    margin-top: 30px;
+    margin-top: 40px;
     background: #778e9c;
-    height: 60px;
-    border-radius: 20px;
+    height: 45px;
+    border-radius: 10px;
     color: white;
     font-size: 26px;
     cursor: pointer;

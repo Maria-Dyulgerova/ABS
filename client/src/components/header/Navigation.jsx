@@ -27,8 +27,9 @@ export default function Navigation() {
 
                 {!isAuthenticated && (
                     <div id="guest">
-                        <Link to={Path.Login}>Login</Link>
                         <Link to={Path.About}>About</Link>
+                        <Link to={Path.Login}>Login</Link>
+                        
                     </div>
                 )}
             </nav>
