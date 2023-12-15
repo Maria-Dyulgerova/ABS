@@ -51,6 +51,9 @@ export default function ArtistCreate() {
                         <label htmlFor="instrument">Instrument:</label>
                         <input type="text" id="instrument" name="instrument" placeholder="" />
 
+                        <label htmlFor="startedAt">Started At:</label>
+                        <input type="text" id="startedAt" name="startedAt" placeholder="" />
+
                     </div>
                     <div className="element-wrapper"><span>Contact Information: </span>
                         <label htmlFor="email">Email:</label>

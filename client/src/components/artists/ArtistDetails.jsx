@@ -59,9 +59,7 @@ export default function ArtistDetails() {
                         <p className="type">Date Of Birth: <strong>{artistDetails.DOB}</strong></p>
                         <p className="type">Place of Birth: <strong>{artistDetails.POB}</strong></p>
                         <p className="type">Gender: <strong>{artistDetails.gender}</strong></p>
-                        <p className="type">
-                            Started at: <strong>{artistDetails.startedAt}</strong>
-                        </p>
+                        <p className="type">Started at: <strong>{artistDetails.startedAt}</strong></p>
                     </div>
                 </div>
                
