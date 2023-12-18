@@ -1,10 +1,23 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useRef, useEffect  } from 'react';
+
+
 import Path from '../../paths';
 
 import * as artistService from "../../services/artistService";
+import styles from './ArtistCreateEdit.module.css';
+
 
 export default function ArtistCreate() {
     const navigate = useNavigate();
+
+    // const [formValues, setFormValues] = useState({});
+    const [errors, setErrors] = useState({});
+    const artistNameInputRef = useRef();
+    
+    useEffect(() => {
+        artistNameInputRef.current.focus();
+    }, []);
     
     const createArtistSubmitHandler = async (e) => {
         e.preventDefault();
@@ -20,6 +33,32 @@ export default function ArtistCreate() {
             console.log(err);
         }
     }
+    const numberValidator = (e) => {
+        const inputName = e.currentTarget.name;
+        if (isNaN(Number(e.target.value))) {
+            
+            setErrors(state => ({
+                        ...state,
+                        number :   `${inputName} should be a number!`,
+                    }));
+        } else {
+                if (errors.number) {
+                    setErrors(state => ({ ...state, number: '' }));
+                }
+            }
+        console.log(errors);
+
+        // if (formValues.age < 0 || formValues.age > 120) {
+        //     setErrors(state => ({
+        //         ...state,
+        //         age: 'Age should be between 0 and 120',
+        //     }));
+        // } else {
+        //     if (errors.age) {
+        //         setErrors(state => ({ ...state, age: '' }));
+        //     }
+        // }
+    }
 
     return (
         <section id="create-page" className="auth">
@@ -28,7 +67,7 @@ export default function ArtistCreate() {
                     <h1>Register New Artist</h1>
                     <div className="element-wrapper">
                         <label htmlFor="artistName">Name:</label>
-                        <input type="text" id="artistName" name="artistName" placeholder="Enter artist name" />
+                        <input type="text" id="artistName" name="artistName" placeholder="Enter artist's full name" ref={artistNameInputRef}/>
 
                         <label htmlFor="nickName">Nick Name:</label>
                         <input type="text" id="nickName" name="nickName" placeholder="Enter artist nickname" />
@@ -57,7 +96,7 @@ export default function ArtistCreate() {
                     </div>
                     <div className="element-wrapper"><span>Contact Information: </span>
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="" />
+                        <input type="email" id="email" name="email" placeholder="" />
 
                         <label htmlFor="phone">Phone:</label>
                         <input type="text" id="phone" name="phone" placeholder="" />
@@ -66,7 +105,17 @@ export default function ArtistCreate() {
                             <input type="text" id="country" name="country" placeholder="" />
 
                             <label htmlFor="postCode">Post Code:</label>
-                            <input type="text" id="postCode" name="postCode" placeholder="" /> 
+                            <input 
+                                type="text" 
+                                id="postCode" 
+                                name="postCode" 
+                                placeholder="" 
+                                onBlur={numberValidator}
+                                className={errors.number && styles.inputError}
+                            /> 
+                            {errors.number && (
+                        <p className={styles.errorMessage}>{errors.number}</p>
+                    )}
 
                             <label htmlFor="city">City:</label>
                             <input type="text" id="city" name="city" placeholder="" /> 
@@ -117,7 +166,7 @@ export default function ArtistCreate() {
                         <input type="text" id="nextToKinAddress" name="nextToKinAddress" placeholder="" /> 
 
                         <label htmlFor="nextToKinEmail">Email :</label>
-                        <input type="text" id="nextToKinEmail" name="nextToKinEmail" placeholder="" /> 
+                        <input type="email" id="nextToKinEmail" name="nextToKinEmail" placeholder="" /> 
 
                         <label htmlFor="nextToKinPhone">Phone: </label>
                         <input type="text" id="nextToKinPhone" name="nextToKinPhone" placeholder="" />  

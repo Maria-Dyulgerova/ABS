@@ -11,13 +11,13 @@ export const getAll = async () => {
     return Object.values(result);
 };
 export const getOne = async (artist_id) => {
-    console.log(artist_id);
+    // console.log(artist_id);
     const result = await request.get(`${baseUrl}/${artist_id}`, );
 
     return result;
 }
 
-export let body = {
+export const body = {
     _id: "",
     artistName: "",
     nickName: "",
@@ -169,3 +169,55 @@ export const edit = async (artistId, artistData) => {
 };
 
 export const remove = async (artistId) => request.remove(`${baseUrl}/${artistId}`);
+
+export function buildJsonBody(artistData) {
+    // console.log(artistData);
+    body = {
+        // _id: artistData._id,
+        artistName: artistData.artistName,
+        nickName: artistData.nickName,
+        DOB: artistData.DOB,
+        POB: artistData.POB,
+        gender: artistData.gender,
+        imageUrl: artistData.imageUrl,
+        role: artistData.role,
+        instrument: artistData.instrument,
+        startedAt: artistData.startedAt,
+        contact: {
+            email: artistData.email,
+            phone: artistData.phone,
+            address: {
+                country: artistData.country,
+                city: artistData.city,
+                postCode: artistData.postCode,
+                details: artistData.details,
+            }
+        },
+
+        passport: {
+            number: artistData.number,
+            authority: artistData.authority,
+            issueDate: artistData.issueDate,
+            validityDate: artistData.validityDate,
+        },
+        documents: {
+            PDNum: artistData.PDNum,
+            selfEmplTaxNum: artistData.selfEmplTaxNum,
+            medAttestToDate: artistData.medAttestToDate,
+            accidentInsuranceNum: artistData.accidentInsuranceNum,
+
+        },
+        nextOfKin: {
+            nextToKinName: artistData.nextToKinName,
+            nextToKinAddress: artistData.nextToKinAddress,
+            nextToKinEmail: artistData.nextToKinEmail,
+            nextToKinPhone: artistData.nextToKinPhone
+        },
+
+        // createdAt: new Date().toISOString(),
+        // updatedAt: new Date().toISOString(),
+        
+    };
+    
+    return body;
+};

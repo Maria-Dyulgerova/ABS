@@ -8,14 +8,14 @@ export default function ArtistListItem({
     instrument,
     contact
 }) {
-    console.log(contact);
+    // console.log(contact);
     // console.log(key);
     return (
         
        
                         <tr>
-                            
-                            <td><b>{artistName}</b>{nickName}</td>
+                            <td><b>{artistName}</b></td>
+                            <td>{nickName}</td>
                             <td>{role}</td>
                             <td>{instrument}</td>
                             <td>{contact?.email}</td>

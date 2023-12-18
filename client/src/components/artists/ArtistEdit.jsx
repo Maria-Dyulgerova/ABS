@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import Path from '../../paths';
-import * as artistService from "../../services/artistService";
 
+import * as artistService from "../../services/artistService";
 
 export default function ArtistEdit() {
     const navigate = useNavigate();
     const { artistId } = useParams();
-    const [artist, setArtist] = useState({});
+    const jsonBody = artistService.body;
+    console.log(jsonBody);
+    const [artist, setArtist] = useState({jsonBody});
 
     // in case somebody changes id in the address bar
     useEffect(() => {
@@ -18,19 +20,19 @@ export default function ArtistEdit() {
             });
     }, [artistId]);
 
-
+console.log(artist);
     const editArtistSubmitHandler = async (e) => {
         e.preventDefault();
 
         const artistData = Object.fromEntries(new FormData(e.currentTarget));
-        console.log(artistData);
+        // console.log(artistData);
 
         try {
             await artistService.edit(artistId, artistData);
 
             navigate(Path.ArtistsList);
         } catch (err) {
-            // Error notification
+            
             console.log(err);
         }
     }
@@ -40,6 +42,7 @@ export default function ArtistEdit() {
             ...state,
             [e.target.name]: e.target.value
         }));
+        // console.log(e.target.value);
     };
 
     

@@ -14,6 +14,7 @@ import ArtistListContainer from './components/artists/ArtistListContainer';
 import ArtistDetails from './components/artists/ArtistDetails';
 import ArtistCreate from './components/artists/ArtistCreate';
 import ArtistEdit from './components/artists/ArtistEdit';
+import NotFound from './components/NotFound';
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
                                 {/* <Route path={Path.ArtistCreate} element={<ArtistCreate/>}/> */}
                                 <Route path={Path.Logout} element={<Logout />} />
                             </Route>
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     {/* </Suspense> */}
                 </div>

@@ -14,9 +14,9 @@ export default function ArtistDetails() {
     const [artistDetails, setArtistDetails] = useState({});
     const { artistId } = useParams();
 
-    console.log(artistDetails);
-    console.log(artistId);
-    console.log(location.pathname);
+    // console.log(artistDetails);
+    // console.log(artistId);
+    // console.log(location.pathname);
 
     useEffect(() => {
         artistService.getOne(artistId)

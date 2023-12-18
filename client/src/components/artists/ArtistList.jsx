@@ -21,13 +21,14 @@ export default function ArtistList() {
     return (
         
         <section id="catalog-page">
-            <h1>All Artists</h1>
+            <h1>Artists List</h1>
             <div className="allArtists">
                 <div className="allArtists-info">
-                    <table className="artist-list-item">
+                    <table className="artist-list">
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Nickname</th>
                                 <th>Role</th>
                                 <th>Instrument</th>
                                 <th>Email</th>
