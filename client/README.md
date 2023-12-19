@@ -1,8 +1,33 @@
-# React + Vite
+Artists Booking System ABS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Системата има вход, администратор предварително  задава парола и потребителско име по определени правила
 
-Currently, two official plugins are available:
+Таблица компании
+Възможност за CRUD операции - създаване, четене, редактиране изтриване
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Таблица кораби 
+Информация за:
+CRUD операции
+
+Връзка с таблица компании
+
+Таблица обекти
+Може да са свързани с таблица кораби, където на 1 кораб може да има повече от 1 сцена
+
+Таблица Артисти
+Въвеждане на всички необходими полета
+Търсене по 
+
+
+
+Таблица Банди
+Лист с id на артисти, 
+
+Таблица договори
+
+Свързана с таблица кораби и артисти, 
+
+Какво инфо има в договор с банда
+
+При опит да се регистрира договор на артист или група на даден кораб, да извежда всички заредени договори за същия период ако има такива. Така ще се вижда дали някой от артистите не се дублира за някоя от сцените.
+
