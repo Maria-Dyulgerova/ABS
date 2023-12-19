@@ -8,11 +8,7 @@ export default function ArtistListItem({
     instrument,
     contact
 }) {
-    // console.log(contact);
-    // console.log(key);
     return (
-        
-       
                         <tr>
                             <td><b>{artistName}</b></td>
                             <td>{nickName}</td>
@@ -22,6 +18,5 @@ export default function ArtistListItem({
                             <td>{contact?.phone}</td>
                             <td><Link to={`/artists/${_id}`} className="details-button">Details</Link></td>
                         </tr>
-                   
     );
 }

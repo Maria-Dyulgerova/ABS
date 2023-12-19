@@ -8,8 +8,8 @@ import * as artistService from "../../services/artistService";
 export default function ArtistEdit() {
     const navigate = useNavigate();
     const { artistId } = useParams();
-    const jsonBody = artistService.body;
-    console.log(jsonBody);
+    const jsonBody = artistService.body_json;
+    // console.log(jsonBody);
     const [artist, setArtist] = useState({jsonBody});
 
     // in case somebody changes id in the address bar
@@ -20,7 +20,7 @@ export default function ArtistEdit() {
             });
     }, [artistId]);
 
-console.log(artist);
+// console.log(artist);
     const editArtistSubmitHandler = async (e) => {
         e.preventDefault();
 
@@ -42,7 +42,7 @@ console.log(artist);
             ...state,
             [e.target.name]: e.target.value
         }));
-        // console.log(e.target.value);
+        console.log(e.target.name);
     };
 
     

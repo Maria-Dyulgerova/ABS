@@ -17,7 +17,7 @@ export const getOne = async (artist_id) => {
     return result;
 }
 
-export const body = {
+export const body_json = {
     _id: "",
     artistName: "",
     nickName: "",
@@ -65,7 +65,7 @@ export const body = {
 };
 export const create = async (artistData) => {
     // console.log(artistData);
-    body = {
+    const body_json = {
         _id: artistData._id,
         artistName: artistData.artistName,
         nickName: artistData.nickName,
@@ -111,13 +111,13 @@ export const create = async (artistData) => {
         updatedAt: new Date().toISOString(),
         
     };
-    const result = await request.post(baseUrl, body);
+    const result = await request.post(baseUrl, body_json);
 
     return result;
 };
 
 export const edit = async (artistId, artistData) => {
-    body = {
+    const body_json = {
         _id: artistData._id,
         artistName: artistData.artistName,
         nickName: artistData.nickName,
@@ -163,8 +163,9 @@ export const edit = async (artistId, artistData) => {
         updatedAt: new Date().toISOString(),
         
     };
-    const result = await request.put(`${baseUrl}/${artistId}`, body);
+    const result = await request.put(`${baseUrl}/${artistId}`, body_json);
 
+    console.log(result);
     return result;
 };
 
@@ -172,7 +173,7 @@ export const remove = async (artistId) => request.remove(`${baseUrl}/${artistId}
 
 export function buildJsonBody(artistData) {
     // console.log(artistData);
-    body = {
+    const body_json = {
         // _id: artistData._id,
         artistName: artistData.artistName,
         nickName: artistData.nickName,
@@ -219,5 +220,5 @@ export function buildJsonBody(artistData) {
         
     };
     
-    return body;
+    return body_json;
 };

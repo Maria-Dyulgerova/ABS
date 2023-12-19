@@ -1,63 +1,55 @@
 import { useEffect, useState } from 'react';
 
-import * as artistService from '../../services/artistService';
-import ArtistListItem from './ArtistListItem';
+import * as companyService from '../../services/companyService';
+import CompanyListItem from './CompanyListItem';
 
-export default function ArtistList() {
-    const [artists, setArtists] = useState([]);
+export default function CompanytList() {
+    const [companies, setCompanies] = useState([]);
 
     useEffect(() => {
-        artistService.getAll()
+        companyService.getAll()
             .then(
                 result => {
-                    setArtists(result);
+                    setCompanies(result);
                     
                 })
             .catch(err => {
                 console.log(err);
             });
     }, []);
-    // console.log(artists);
+    // console.log(companies);
     return (
         
         <section id="catalog-page">
-            <h1>Artists List</h1>
+            <h1>Companies List</h1>
             <div className="allArtists">
                 <div className="allArtists-info">
                     <table className="artist-list">
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Nickname</th>
-                                <th>Role</th>
-                                <th>Instrument</th>
+                                <th>Nationality</th>
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-            {artists.map(artist => (
+            {companies.map(company => (
                 
-                <ArtistListItem 
-                    key={artist._id}  
-                    _id={artist._id} 
-                    artistName={artist.artistName}  
-                    nickName={artist.nickName} 
-                    role={artist.role} 
-                    instrument={artist.instrument} 
-                    contact={artist.contact} 
+                <CompanyListItem 
+                    key={company._id}  
+                    _id={company._id} 
+                    companyName={company.companyName}  
+                    nationality={company.nationality} 
+                    contact={company.contact} 
                     />
                 
             ))}
-            
-            
-
-            
                         </tbody>
                     </table>
-                    {artists.length === 0 && (
-                        <h3 className="no-articles">No artists yet</h3>
+                    {companies.length === 0 && (
+                        <h3 className="no-articles">No companies yet</h3>
                     )}
                 </div>
             </div>

@@ -1,0 +1,48 @@
+{
+  "1": {
+    "_id": "1",
+    "companyId": "1",
+    "shipName": "Color Fantasy",
+    "signature": "m/s Color Fantasy",
+    "embarkIn": "Oslo",
+    "disembarkIn": "Kiel",
+    "noLaterThen": "12:00"
+  },
+  "2": {
+    "_id": "2",
+    "companyId": "1",
+    "shipName": "Color Magic",
+    "signature": "m/s Color Magic",
+    "embarkIn": "Kiel",
+    "disembarkIn": "Oslo",
+    "noLaterThen": "12:00"
+  },
+  "3": {
+    "_id": "3",
+    "companyId": "2",
+    "shipName": "Megastar",
+    "signature": "m/s Megastar",
+    "embarkIn": "Talin",
+    "disembarkIn": "Helsinki",
+    "noLaterThen": "12:00"
+  },
+  "4": {
+    "_id": "4",
+    "companyId": "2",
+    "shipName": "Star",
+    "signature": "m/s Star",
+    "embarkIn": "Helsinki",
+    "disembarkIn": "Talin",
+    "noLaterThen": "12:00"
+  },
+  "5": {
+    "_id": "5",
+    "companyId": "3",
+    "shipName": "Crown",
+    "signature": "m/s Crown",
+    "embarkIn": "Stockholm",
+    "disembarkIn": "Coppengagen",
+    "noLaterThen": "12:00"
+  }
+}
+  

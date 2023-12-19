@@ -1,0 +1,59 @@
+{
+  "1": {
+    "_id": "1",
+    "companyName": "Color Line",
+    "contact": {
+      "email": "username@some.com",
+      "phone": "003594235523",
+      "address": {
+        "country": "Norway",
+        "city": "Oslo",
+        "postCode": "1000",
+        "details": "456 Elm St"
+      }
+    },
+    "nationality": "NO",
+    "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
+    "createdBy": "2"
+  },
+  "2": {
+    "_id": "2",
+    "companyName": "Tallink",
+    "contact": {
+      "email": "username@some.com",
+      "phone": "003594235523",
+      "address": {
+        "country": "Estonia",
+        "city": "Tallin",
+        "postCode": "1000",
+        "details": "456 Elm St"
+      }
+    },
+    "nationality": "ES",
+    
+    "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
+    "createdBy": "2"
+  },
+  "3": {
+    "_id": "3",
+    "companyName": "DFDS",
+    "contact": {
+      "email": "username@some.com",
+      "phone": "003594235523",
+      "address": {
+        "country": "Denmark",
+        "city": "Coppenhagen",
+        "postCode": "1000",
+        "details": "456 Elm St"
+      }
+    },
+    "nationality": "DK",
+    
+    "createdAt": "2023-11-01T07:22:00.358Z",
+    "updatedAt": "2023-11-01T07:22:00.358Z",
+    "createdBy": "2"
+  }
+}
+  

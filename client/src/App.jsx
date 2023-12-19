@@ -14,6 +14,8 @@ import ArtistListContainer from './components/artists/ArtistListContainer';
 import ArtistDetails from './components/artists/ArtistDetails';
 import ArtistCreate from './components/artists/ArtistCreate';
 import ArtistEdit from './components/artists/ArtistEdit';
+import CompanyListContainer from './components/companies/CompanyListContainer';
+import ShipListContainer from './components/ships/ShipListContainer';
 import NotFound from './components/NotFound';
 
 function App() {
@@ -29,8 +31,12 @@ function App() {
                             {/* <Route path="/register" element={<Register />} /> */}
                             <Route path={Path.ArtistDetails} element={<ArtistDetails />}/>
                             <Route path={Path.ArtistCreate} element={<ArtistCreate/>}/>
-                            <Route path={Path.ArtistEdit} element={<ArtistEdit/>}/>   
+                            <Route path={Path.ArtistEdit} element={<ArtistEdit/>}/>  
+                                 
                             <Route element={<AuthGuard />}>
+                                <Route path={Path.CompanyList} element={<CompanyListContainer />}/>   
+                                <Route path={Path.ShipsList} element={<ShipListContainer />}/>   
+
                                 <Route path={Path.ArtistsList} element={<ArtistListContainer />}/>   
                                 {/* <Route path={Path.ArtistCreate} element={<ArtistCreate/>}/> */}
                                 <Route path={Path.Logout} element={<Logout />} />

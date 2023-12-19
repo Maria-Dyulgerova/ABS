@@ -10,6 +10,9 @@ const Path = {
     ArtistEdit: '/artists/:artistId/edit',
     ArtistDelete: '/artists/:artistId/delete',
     
+    CompanyList: '/companies/list',
+
+    ShipsList: 'ships/list'
 };
 
 export default Path;
