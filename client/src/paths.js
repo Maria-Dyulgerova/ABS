@@ -11,6 +11,7 @@ const Path = {
     ArtistDelete: '/artists/:artistId/delete',
     
     CompanyList: '/companies/list',
+    CompanyDetails: '/companies/:companyId',
 
     ShipsList: 'ships/list'
 };

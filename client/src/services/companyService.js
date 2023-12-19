@@ -15,6 +15,9 @@ export const getOne = async (company_id) => {
 
     return result;
 };
+
+export const remove = async (company_id) => request.remove(`${baseUrl}/${company_id}`);
+
 export const getCompName = async (companyId) => {
     const compData = await request.get(`${baseUrl}/${companyId}`, );
     const compName = Object.values(compData);

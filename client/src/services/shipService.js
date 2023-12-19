@@ -33,12 +33,22 @@ export const getOne = async (ship_id) => {
 
     return result;
 };
+export const getAllFromCompany = async (company_id) => {
+    const query = new URLSearchParams({
+        where: `companyId="${company_id}"`,
+        load: `companyId="${company_id}"`,
+    });
+
+    const result = await request.get(`${baseUrl}?${query}`);
+    return Object.values(result);
+};
+
 export const getCompanyName = (companyId) => {
     let cData = '';
     companyService.getCompName(companyId)
     .then(
         result => {
-            // console.log(result);
+            console.log(result);
             cData = result;
             // console.log(typeof result);
         }
